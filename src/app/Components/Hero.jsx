@@ -9,14 +9,13 @@ export function Hero() {
         </h1>
         <p className="text-lg text-gray-500">Te conecta.</p>
       </div>
-      {/* Sección de botones de descarga */}
       <div className="flex flex-col items-center space-y-6 mt-8 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
         <div>
           <a
             href="https://apps.apple.com/es/app/kuario/id1276585367"
             target="_blank"
           >
-            <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center">
+            <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
               <div className="mr-3">
                 <svg viewBox="0 0 384 512" width="30">
                   <path
@@ -40,7 +39,7 @@ export function Hero() {
             href="https://play.google.com/store/apps/details?id=com.skuario.app&hl=es_AR"
             target="_blank"
           >
-            <div className="w-48 h-14 bg-black text-white rounded-lg flex items-center justify-center">
+            <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
               <div className="mr-3">
                 <svg viewBox="30 336.7 120.9 129.2" width="30">
                   <path
@@ -72,7 +71,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Sección de las tarjetas */}
       <section className="mx-3">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 m-8 max-w-screen-xl mx-auto">
           <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
