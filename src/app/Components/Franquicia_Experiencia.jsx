@@ -1,14 +1,55 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 export function Franquicia_Experiencia() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [expName, setExpName] = useState("");
+  const [expEmail, setExpEmail] = useState("");
+  const [expMessage, setExpMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const [franqName, setFranqName] = useState("");
+  const [franqEmail, setFranqEmail] = useState("");
+  const [franqMessage, setFranqMessage] = useState("");
+
+  const expForm = useRef();
+  const franqForm = useRef();
+
+  const sendEmail = (formRef) => {
+    emailjs
+      .sendForm(
+        "service_mtyocxv",
+        "template_gvesn88",
+        formRef.current,
+        "QKnAoh9QQZ0-6AXIU"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          toast.success(
+            "Formulario enviado correctamente. ¡Gracias por tu mensaje!"
+          );
+        },
+        (error) => {
+          console.log(error.text);
+          toast.error(
+            "Error al enviar el formulario. Inténtalo de nuevo más tarde."
+          );
+        }
+      );
+  };
+
+  const handleSubmit = (
+    e,
+    formRef,
+    name,
+    email,
+    message,
+    setName,
+    setEmail,
+    setMessage
+  ) => {
     e.preventDefault();
 
     if (!name) {
@@ -31,7 +72,7 @@ export function Franquicia_Experiencia() {
       return;
     }
 
-    toast.success("Formulario enviado correctamente. ¡Gracias por tu mensaje!");
+    sendEmail(formRef);
 
     setName("");
     setEmail("");
@@ -49,41 +90,59 @@ export function Franquicia_Experiencia() {
         <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
           ¡Contános tu experiencia!
         </h2>
-        <form className="w-full max-w-md space-y-4" onSubmit={handleSubmit}>
+        <form
+          className="w-full max-w-md space-y-4"
+          onSubmit={(e) =>
+            handleSubmit(
+              e,
+              expForm,
+              expName,
+              expEmail,
+              expMessage,
+              setExpName,
+              setExpEmail,
+              setExpMessage
+            )
+          }
+          ref={expForm}
+        >
           <div>
-            <label className="text-sm font-medium" htmlFor="name">
+            <label className="text-sm font-medium" htmlFor="expName">
               Nombre
             </label>
             <input
               className="h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              id="name"
+              id="expName"
               placeholder="Ingresa tu nombre"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={expName}
+              onChange={(e) => setExpName(e.target.value)}
+              name="user_name"
             />
           </div>
           <div>
-            <label className="text-sm font-medium" htmlFor="email">
+            <label className="text-sm font-medium" htmlFor="expEmail">
               Email
             </label>
             <input
               className="h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              id="email"
+              id="expEmail"
               placeholder="Ingresa tu email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={expEmail}
+              onChange={(e) => setExpEmail(e.target.value)}
+              name="user_email"
             />
           </div>
           <div>
-            <label className="text-sm font-medium" htmlFor="message">
+            <label className="text-sm font-medium" htmlFor="expMessage">
               Mensaje
             </label>
             <textarea
               className="w-full resize-none rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              id="message"
+              id="expMessage"
               placeholder="Cuéntanos sobre tu experiencia"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              value={expMessage}
+              onChange={(e) => setExpMessage(e.target.value)}
+              name="message"
             ></textarea>
           </div>
           <button
@@ -94,23 +153,72 @@ export function Franquicia_Experiencia() {
           </button>
         </form>
       </div>
-      <div className="flex h-full w-full flex-col items-center justify-center bg-gray-900 p-8 text-white md:w-1/2 md:p-12 lg:p-16 xl:p-20">
-        <div className="max-w-md space-y-4">
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-4xl">
-            Vos también podés ser parte de{" "}
-            <span className="bg-cyan-700 text-white rounded-md inline-block px-2">
-              Vadum.
-            </span>{" "}
-            ¡Escribinos ya!
-          </h2>
-          <p className="text-lg">
-            Para ser parte de nuestra franquicia, por favor completa el
-            formulario y nos pondremos en contacto contigo a la brevedad.
-          </p>
-          <button className="h-10 w-full rounded-md bg-[#b6dde5] text-black text-sm font-bold hover:bg-[#8fbdc7] transition-colors duration-300">
-            Llenar formulario
+      <div className="flex w-full flex-col items-center justify-center bg-gray-900 p-8 text-white md:w-1/2 md:p-12 lg:p-16 xl:p-20">
+        <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
+          ¡Ser parte de la franquicia!
+        </h2>
+        <form
+          className="w-full max-w-md space-y-4"
+          onSubmit={(e) =>
+            handleSubmit(
+              e,
+              franqForm,
+              franqName,
+              franqEmail,
+              franqMessage,
+              setFranqName,
+              setFranqEmail,
+              setFranqMessage
+            )
+          }
+          ref={franqForm}
+        >
+          <div>
+            <label className="text-sm font-medium" htmlFor="franqName">
+              Nombre
+            </label>
+            <input
+              className="h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="franqName"
+              placeholder="Ingresa tu nombre"
+              value={franqName}
+              onChange={(e) => setFranqName(e.target.value)}
+              name="user_name"
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium" htmlFor="franqEmail">
+              Email
+            </label>
+            <input
+              className="h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="franqEmail"
+              placeholder="Ingresa tu email"
+              value={franqEmail}
+              onChange={(e) => setFranqEmail(e.target.value)}
+              name="user_email"
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium" htmlFor="franqMessage">
+              Mensaje
+            </label>
+            <textarea
+              className="text-black w-full resize-none rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="franqMessage"
+              placeholder="Cuéntanos por qué quieres ser parte de la franquicia"
+              value={franqMessage}
+              onChange={(e) => setFranqMessage(e.target.value)}
+              name="message"
+            ></textarea>
+          </div>
+          <button
+            className="h-10 w-full rounded-md bg-white text-black text-sm font-medium border-2 border-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300 hover:bg-black hover:text-white"
+            type="submit"
+          >
+            Enviar
           </button>
-        </div>
+        </form>
       </div>
       <ToastContainer />
     </section>
