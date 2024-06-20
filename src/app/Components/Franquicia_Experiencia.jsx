@@ -87,9 +87,12 @@ export function Franquicia_Experiencia() {
   return (
     <section className="flex flex-col md:flex-row h-full w-full">
       <div className="flex w-full flex-col items-center justify-center bg-gray-100 p-8 md:w-1/2 md:p-12 lg:p-16 xl:p-20">
-        <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
-          ¡Contános tu experiencia!
-        </h2>
+        {/* Contenedor del Título Centrado */}
+        <div className="w-full text-center">
+          <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
+            ¡Contános tu experiencia!
+          </h2>
+        </div>
         <form
           className="w-full max-w-md space-y-4"
           onSubmit={(e) =>
@@ -154,8 +157,8 @@ export function Franquicia_Experiencia() {
         </form>
       </div>
       <div className="flex w-full flex-col items-center justify-center bg-gray-900 p-8 text-white md:w-1/2 md:p-12 lg:p-16 xl:p-20">
-        <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
-          ¡Ser parte de la franquicia!
+        <h2 className="mb-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl">
+          ¡Quiero ser parte!
         </h2>
         <form
           className="w-full max-w-md space-y-4"
@@ -204,9 +207,9 @@ export function Franquicia_Experiencia() {
               Mensaje
             </label>
             <textarea
-              className="text-black w-full resize-none rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full resize-none rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               id="franqMessage"
-              placeholder="Cuéntanos por qué quieres ser parte de la franquicia"
+              placeholder="Cuéntanos por qué quieres ser parte de Vadum"
               value={franqMessage}
               onChange={(e) => setFranqMessage(e.target.value)}
               name="message"

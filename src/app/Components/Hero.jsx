@@ -7,7 +7,7 @@ export function Hero() {
         <h1 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl mb-2">
           Vadum
         </h1>
-        <p className="text-lg text-gray-500">Te conecta.</p>
+        <p className="text-lg text-gray-500">El primer kiosco autogestionable del país.</p>
       </div>
       <div className="flex flex-col items-center space-y-6 mt-8 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
         <div>
@@ -76,11 +76,11 @@ export function Hero() {
           <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
             <div className="px-5 py-2">
               <div className="font-bold text-2xl mb-2 text-[#21293d]">
-                Como cargo saldo?
+                ¿Cómo cargo saldo?
               </div>
               <p className="text-gray-700 text-base">
                 Aprende a cargar saldo en tu cuenta de <b>KUARIO</b> para poder
-                disfrutar de todas nuestras características.
+                disfrutar de nuestros servicios.
               </p>
             </div>
             <div className="px-4 py-2">
@@ -93,10 +93,10 @@ export function Hero() {
           <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
             <div className="px-4 py-2">
               <div className="font-bold text-2xl mb-2 text-[#21293d]">
-                Como imprimo?
+              ¿Cómo imprimo?
               </div>
               <p className="text-gray-700 text-base">
-                Aprende a imprimir en nuestras máquinas de impresión con tu
+                Aprende a imprimir en nuestros kioscos Vadum con tu
                 cuenta de <b>KUARIO</b> y disfruta de la mejor calidad.
               </p>
             </div>
@@ -110,10 +110,10 @@ export function Hero() {
           <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
             <div className="px-4 py-2">
               <div className="font-bold text-2xl mb-2 text-[#21293d]">
-                Como copio?
+              ¿Cómo copio?
               </div>
               <p className="text-gray-700 text-base">
-                Aprende a copiar en nuestras máquinas de copiado con tu cuenta
+                Aprende a copiar en nuestros kioscos Vadum con tu cuenta
                 de <b>KUARIO</b> y disfruta de la mejor calidad.
               </p>
             </div>
@@ -127,10 +127,10 @@ export function Hero() {
           <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
             <div className="px-4 py-2">
               <div className="font-bold text-2xl mb-2 text-[#21293d]">
-                Como escaneo?
+              ¿Cómo escaneo?
               </div>
               <p className="text-gray-700 text-base">
-                Aprende a escanear en nuestras máquinas de escaneo con tu cuenta
+                Aprende a escanear en nuestros kioscos Vadum con tu cuenta
                 de <b>KUARIO</b> y disfruta de la mejor calidad.
               </p>
             </div>
