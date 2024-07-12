@@ -87,7 +87,6 @@ export function Franquicia_Experiencia() {
   return (
     <section className="flex flex-col md:flex-row h-full w-full">
       <div className="flex w-full flex-col items-center justify-center bg-gray-100 p-8 md:w-1/2 md:p-12 lg:p-16 xl:p-20">
-        {/* Contenedor del Título Centrado */}
         <div className="w-full text-center">
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
             ¡Contános tu experiencia!
