@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+
 export function Hero() {
   return (
     <section>
@@ -12,28 +13,40 @@ export function Hero() {
         </p>
       </div>
       <div className="flex flex-col items-center space-y-6 mt-8 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
-        <div>
-          <a
-            href="https://apps.apple.com/es/app/kuario/id1276585367"
-            target="_blank"
-          >
-            <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
-              <div className="mr-3">
-                <Image
-                  src="/kuario.png"
-                  width={40}
-                  height={20}
-                  alt="imagen de kuario"
-                />
-              </div>
-              <div>
-                <div className="text-xs">Descarga en</div>
-                <div className="text-2xl font-semibold font-sans -mt-1">
-                  App Store
+        <div className="flex items-center space-x-3">
+          <div>
+            <div className="w-24 h-24 bg-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
+            <Image
+              src="/iosQR.png"
+              width={100}
+              height={100}
+              alt="QR iOS"
+            />
+            </div>
+          </div>
+          <div>
+            <a
+              href="https://apps.apple.com/es/app/kuario/id1276585367"
+              target="_blank"
+            >
+              <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
+                <div className="mr-3">
+                  <Image
+                    src="/kuario.png"
+                    width={40}
+                    height={20}
+                    alt="imagen de kuario"
+                  />
+                </div>
+                <div>
+                  <div className="text-xs">Descarga en</div>
+                  <div className="text-2xl font-semibold font-sans -mt-1">
+                    App Store
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
 
         <div>
@@ -58,6 +71,17 @@ export function Hero() {
               </div>
             </div>
           </a>
+        </div>
+
+        <div>
+          <div className="w-24 h-24 bg-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
+          <Image
+                src="/androidQR.png"
+                width={100}
+                height={100}
+                alt="QR Android"
+              />
+          </div>
         </div>
       </div>
 
