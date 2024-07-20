@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 export function Hero() {
   return (
@@ -13,25 +12,25 @@ export function Hero() {
         </p>
       </div>
       <div className="flex flex-col items-center space-y-6 mt-8 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
-        <div className="flex items-center space-x-3">
-          <div>
-            <div className="w-24 h-24 bg-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
-            <Image
-              src="/iosQR.png"
-              width={100}
-              height={100}
-              alt="QR iOS"
-            />
+        {/* iOS */}
+        <div className="flex flex-col items-center space-x-3">
+          <span className="text-black font-semibold mb-2 text-lg">
+            Disponible en iOS
+          </span>
+          <div className="hidden md:block">
+            <div className="w-32 h-32 bg-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
+              <img src="/iosQR.png" alt="QR iOS" className="bg-black" />
             </div>
           </div>
-          <div>
+          <div className="md:hidden">
             <a
               href="https://apps.apple.com/es/app/kuario/id1276585367"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
                 <div className="mr-3">
-                  <Image
+                  <img
                     src="/kuario.png"
                     width={40}
                     height={20}
@@ -49,38 +48,39 @@ export function Hero() {
           </div>
         </div>
 
-        <div>
-          <a
-            href="https://play.google.com/store/apps/details?id=com.skuario.app&hl=es_AR"
-            target="_blank"
-          >
-            <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
-              <div className="mr-3">
-                <Image
-                  src="/kuario.png"
-                  width={40}
-                  height={20}
-                  alt="imagen de kuario"
-                />
-              </div>
-              <div>
-                <div className="text-xs">Descarga en</div>
-                <div className="text-xl font-semibold font-sans -mt-1">
-                  Google Play
+        {/* Android */}
+        <div className="flex flex-col items-center space-x-3">
+          <span className="text-black font-semibold mb-2 text-lg">
+            Disponible en Android
+          </span>
+          <div className="hidden md:block">
+            <div className="w-32 h-32 bg-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
+              <img src="/androidQR.png" alt="QR Android" />
+            </div>
+          </div>
+          <div className="md:hidden">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.skuario.app&hl=es_AR"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
+                <div className="mr-3">
+                  <img
+                    src="/kuario.png"
+                    width={40}
+                    height={20}
+                    alt="imagen de kuario"
+                  />
+                </div>
+                <div>
+                  <div className="text-xs">Descarga en</div>
+                  <div className="text-2xl font-semibold font-sans -mt-1">
+                    Play Store
+                  </div>
                 </div>
               </div>
-            </div>
-          </a>
-        </div>
-
-        <div>
-          <div className="w-24 h-24 bg-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
-          <Image
-                src="/androidQR.png"
-                width={100}
-                height={100}
-                alt="QR Android"
-              />
+            </a>
           </div>
         </div>
       </div>
