@@ -8,7 +8,7 @@ export function Hero() {
           Vadum
         </h1>
         <p className="text-lg text-gray-500">
-          El primer kiosco autogestionable del país.
+          El primer quiosco autogestionable del país.
         </p>
       </div>
       <div className="flex flex-col items-center space-y-6 mt-8 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
@@ -110,7 +110,7 @@ export function Hero() {
                 ¿Cómo imprimo?
               </div>
               <p className="text-gray-700 text-base">
-                Aprende a imprimir en nuestros kioscos Vadum con tu cuenta de{" "}
+                Aprende a imprimir en nuestros quioscos Vadum con tu cuenta de{" "}
                 <b>KUARIO</b> y disfruta de la mejor calidad.
               </p>
             </div>
@@ -127,7 +127,7 @@ export function Hero() {
                 ¿Cómo copio?
               </div>
               <p className="text-gray-700 text-base">
-                Aprende a copiar en nuestros kioscos Vadum con tu cuenta de{" "}
+                Aprende a copiar en nuestros quioscos Vadum con tu cuenta de{" "}
                 <b>KUARIO</b> y disfruta de la mejor calidad.
               </p>
             </div>
@@ -144,7 +144,7 @@ export function Hero() {
                 ¿Cómo escaneo?
               </div>
               <p className="text-gray-700 text-base">
-                Aprende a escanear en nuestros kioscos Vadum con tu cuenta de{" "}
+                Aprende a escanear en nuestros quioscos Vadum con tu cuenta de{" "}
                 <b>KUARIO</b> y disfruta de la mejor calidad.
               </p>
             </div>
