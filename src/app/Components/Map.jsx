@@ -2,7 +2,7 @@ import React from "react";
 
 export function Map() {
   return (
-    <div className="flex flex-col items-center justify-center w-full bg-gray-900 p-8 text-white md:p-12 lg:p-16 xl:p-20">
+    <div className="flex flex-col items-center justify-center w-full bg-gray-900 p-8 text-white md:p-12 lg:p-16 xl:p-20 gradient-background">
       <h1 className="mb-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl">
         ¡Encontrá tu quiosco Vadum más cercano!
       </h1>

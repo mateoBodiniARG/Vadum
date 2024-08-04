@@ -155,7 +155,7 @@ export function Franquicia_Experiencia() {
           </button>
         </form>
       </div>
-      <div className="flex w-full flex-col items-center justify-center bg-gray-900 p-8 text-white md:w-1/2 md:p-12 lg:p-16 xl:p-20">
+      <div className="flex w-full flex-col items-center justify-center bg-gray-900 p-8 text-white md:w-1/2 md:p-12 lg:p-16 xl:p-20 gradient-background">
         <h2 className="mb-4 text-3xl font-bold text-center sm:text-4xl md:text-5xl">
           ¡Quiero ser parte!
         </h2>
