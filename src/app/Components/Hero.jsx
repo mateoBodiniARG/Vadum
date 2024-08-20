@@ -1,6 +1,24 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
+import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { ComputerIcon, SmartphoneNfcIcon } from "lucide-react";
 
 export function Hero() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [dialogMode, setDialogMode] = useState(null);
+
+  const handleOpenDialog = (mode) => {
+    setIsDialogOpen(true);
+    setDialogMode(mode);
+  };
+
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+    setDialogMode(null);
+  };
+
   return (
     <section>
       <div className="text-center">
@@ -11,6 +29,7 @@ export function Hero() {
           El primer quiosco autogestionable del país.
         </p>
       </div>
+
       <div className="flex flex-col items-center space-y-6 mt-8 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
         {/* iOS */}
         <div className="flex flex-col items-center space-x-3">
@@ -27,21 +46,20 @@ export function Hero() {
               href="https://apps.apple.com/es/app/kuario/id1276585367"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-48 h-14 bg-black text-white rounded-xl items-center justify-center transition duration-300 hover:opacity-80 cursor-pointer flex "
             >
-              <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
-                <div className="mr-3">
-                  <img
-                    src="/kuario.png"
-                    width={40}
-                    height={20}
-                    alt="imagen de kuario"
-                  />
-                </div>
-                <div>
-                  <div className="text-xs">Descarga en</div>
-                  <div className="text-2xl font-semibold font-sans -mt-1">
-                    App Store
-                  </div>
+              <div className="mr-3">
+                <img
+                  src="/kuario.png"
+                  width={40}
+                  height={20}
+                  alt="imagen de kuario"
+                />
+              </div>
+              <div>
+                <div className="text-xs">Descarga en</div>
+                <div className="text-2xl font-semibold font-sans -mt-1">
+                  App Store
                 </div>
               </div>
             </a>
@@ -63,21 +81,20 @@ export function Hero() {
               href="https://play.google.com/store/apps/details?id=com.skuario.app&hl=es_AR"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-48 h-14 bg-black text-white rounded-xl  items-center justify-center transition duration-300 hover:opacity-80 cursor-pointer flex "
             >
-              <div className="w-48 h-14 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
-                <div className="mr-3">
-                  <img
-                    src="/kuario.png"
-                    width={40}
-                    height={20}
-                    alt="imagen de kuario"
-                  />
-                </div>
-                <div>
-                  <div className="text-xs">Descarga en</div>
-                  <div className="text-2xl font-semibold font-sans -mt-1">
-                    Play Store
-                  </div>
+              <div className="mr-3">
+                <img
+                  src="/kuario.png"
+                  width={40}
+                  height={20}
+                  alt="imagen de kuario"
+                />
+              </div>
+              <div>
+                <div className="text-xs">Descarga en</div>
+                <div className="text-2xl font-semibold font-sans -mt-1">
+                  Play Store
                 </div>
               </div>
             </a>
@@ -87,75 +104,132 @@ export function Hero() {
 
       <section className="mx-3">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 m-8 max-w-screen-xl mx-auto">
-          <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
-            <div className="px-5 py-2">
-              <div className="font-bold text-2xl mb-2 text-[#21293d]">
-                ¿Cómo cargo saldo?
-              </div>
-              <p className="text-gray-700 text-base">
-                Aprende a cargar saldo en tu cuenta de <b>KUARIO</b> para poder
-                disfrutar de nuestros servicios.
-              </p>
-            </div>
-            <div className="px-4 py-2">
-              <button className="w-full bg-[#21293d] hover:bg-black hover:ease-in-out hover:text-white duration-300 text-white font-bold py-1 px-2 rounded border border-[#eaeaea]">
-                Ver video
-              </button>
-            </div>
+          <div className="p-4 rounded-lg flex flex-col items-center">
+            <a href="" className="w-28 h-28">
+              <img
+                src="/comoImprimo.png"
+                alt="Cargá archivos"
+                className="w-28 h-28"
+              />
+            </a>
+            <span className="font-bold text-xl text-center">Como imprimir</span>
           </div>
 
-          <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
-            <div className="px-4 py-2">
-              <div className="font-bold text-2xl mb-2 text-[#21293d]">
-                ¿Cómo imprimo?
-              </div>
-              <p className="text-gray-700 text-base">
-                Aprende a imprimir en nuestros quioscos Vadum con tu cuenta de{" "}
-                <b>KUARIO</b> y disfruta de la mejor calidad.
-              </p>
-            </div>
-            <div className="px-4 py-2">
-              <button className="w-full bg-[#21293d] hover:bg-black hover:ease-in-out hover:text-white duration-300 text-white font-bold py-1 px-2 rounded border border-[#eaeaea]">
-                Ver video
-              </button>
-            </div>
+          <div className="p-4 rounded-lg flex flex-col items-center">
+            <button
+              onClick={() => handleOpenDialog("charge")}
+              className="cursor-pointer"
+            >
+              <img
+                src="/comoCargo.png"
+                alt="Cargá archivos"
+                className="w-28 h-28"
+              />
+            </button>
+            <span className="font-bold text-xl text-center">
+              Como cargar saldo
+            </span>
           </div>
 
-          <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
-            <div className="px-4 py-2">
-              <div className="font-bold text-2xl mb-2 text-[#21293d]">
-                ¿Cómo copio?
-              </div>
-              <p className="text-gray-700 text-base">
-                Aprende a copiar en nuestros quioscos Vadum con tu cuenta de{" "}
-                <b>KUARIO</b> y disfruta de la mejor calidad.
-              </p>
-            </div>
-            <div className="px-4 py-2">
-              <button className="w-full bg-[#21293d] hover:bg-black hover:ease-in-out hover:text-white duration-300 text-white font-bold py-1 px-2 rounded border border-[#eaeaea]">
-                Ver video
-              </button>
-            </div>
+          <div className="p-4 rounded-lg flex flex-col items-center">
+            <a href="" className="w-28 h-28">
+              <img
+                src="/comoCopio.png"
+                alt="Cargá archivos"
+                className="w-28 h-28"
+              />
+            </a>
+            <span className="font-bold text-xl text-center">Como copiar</span>
           </div>
 
-          <div className="p-3 bg-white shadow-md rounded-lg overflow-hidden transition duration-300 ease-in-out transform hover:border-blue-500 hover:shadow-lg hover:-translate-y-1 border border-[#eaeaea]">
-            <div className="px-4 py-2">
-              <div className="font-bold text-2xl mb-2 text-[#21293d]">
-                ¿Cómo escaneo?
-              </div>
-              <p className="text-gray-700 text-base">
-                Aprende a escanear en nuestros quioscos Vadum con tu cuenta de{" "}
-                <b>KUARIO</b> y disfruta de la mejor calidad.
-              </p>
-            </div>
-            <div className="px-4 py-2">
-              <button className="w-full bg-[#21293d] hover:bg-black hover:ease-in-out hover:text-white duration-300 text-white font-bold py-1 px-2 rounded border border-[#eaeaea]">
-                Ver video
-              </button>
-            </div>
+          <div className="p-4 rounded-lg flex flex-col items-center">
+            <a href="" className="w-28 h-28">
+              <img
+                src="/comoEscaneo.png"
+                alt="Cargá archivos"
+                className="w-28 h-28"
+              />
+            </a>
+            <span className="font-bold text-xl text-center">Como escanear</span>
           </div>
         </div>
       </section>
+
+      <Dialog open={isDialogOpen} onOpenChange={handleCloseDialog}>
+        <DialogContent>
+          <DialogHeader>
+            <b>¿Cómo desea cargar saldo?</b>
+          </DialogHeader>
+          <div className="space-y-4 m-auto">
+            {dialogMode === "charge" && (
+              <RadioGroup defaultValue="pc" className="grid grid-cols-2 gap-4">
+                <div>
+                  <RadioGroupItem
+                    value="app"
+                    id="app"
+                    className="peer sr-only"
+                  />
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.skuario.app&hl=es_AR"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground hover:shadow-md"
+                  >
+                    <SmartphoneNfcIcon className="mb-3 h-8 w-8 text-primary" />
+                    App
+                  </a>
+                </div>
+                <div>
+                  <RadioGroupItem value="pc" id="pc" className="peer sr-only" />
+                  <Label
+                    htmlFor="pc"
+                    className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-5 px-10 cursor-pointer hover:bg-accent hover:text-accent-foreground hover:shadow-md"
+                    onClick={() => setDialogMode("pc")}
+                  >
+                    <ComputerIcon className="mb-3 h-8 w-8 text-primary" />
+                    PC
+                  </Label>
+                </div>
+              </RadioGroup>
+            )}
+
+            {dialogMode === "pc" && (
+              <RadioGroup className="grid grid-cols-2 gap-4">
+                <div>
+                  <RadioGroupItem
+                    value="driver"
+                    id="driver"
+                    className="peer sr-only"
+                  />
+                  <a
+                    href="https://example.com/pc-driver"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
+                  >
+                    Driver
+                  </a>
+                </div>
+                <div>
+                  <RadioGroupItem
+                    value="portal"
+                    id="portal"
+                    className="peer sr-only"
+                  />
+                  <a
+                    href="https://example.com/pc-portal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
+                  >
+                    Portal o aplicación
+                  </a>
+                </div>
+              </RadioGroup>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
