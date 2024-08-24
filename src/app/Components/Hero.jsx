@@ -107,12 +107,12 @@ export function Hero() {
           <div className="p-4 rounded-lg flex flex-col items-center">
             <a href="" className="w-28 h-28">
               <img
-                src="/comoImprimo.png"
+                src="/comoCargo.png"
                 alt="Cargá archivos"
                 className="w-28 h-28"
               />
             </a>
-            <span className="font-bold text-xl text-center">Como imprimir</span>
+            <span className="font-bold text-xl text-center">Como cargo saldo</span>
           </div>
 
           <div className="p-4 rounded-lg flex flex-col items-center">
@@ -121,13 +121,13 @@ export function Hero() {
               className="cursor-pointer"
             >
               <img
-                src="/comoCargo.png"
+                src="/comoImprimo.png"
                 alt="Cargá archivos"
                 className="w-28 h-28"
               />
             </button>
             <span className="font-bold text-xl text-center">
-              Como cargar saldo
+              Como imprimo
             </span>
           </div>
 
@@ -139,7 +139,7 @@ export function Hero() {
                 className="w-28 h-28"
               />
             </a>
-            <span className="font-bold text-xl text-center">Como copiar</span>
+            <span className="font-bold text-xl text-center">Como copio</span>
           </div>
 
           <div className="p-4 rounded-lg flex flex-col items-center">
@@ -150,15 +150,15 @@ export function Hero() {
                 className="w-28 h-28"
               />
             </a>
-            <span className="font-bold text-xl text-center">Como escanear</span>
+            <span className="font-bold text-xl text-center">Como escaneo</span>
           </div>
         </div>
       </section>
 
       <Dialog open={isDialogOpen} onOpenChange={handleCloseDialog}>
         <DialogContent>
-          <DialogHeader>
-            <b>¿Cómo desea cargar saldo?</b>
+          <DialogHeader className="flex justify-center items-center">
+            <b>Quiero imprimir desde...</b>
           </DialogHeader>
           <div className="space-y-4 m-auto">
             {dialogMode === "charge" && (
@@ -176,7 +176,7 @@ export function Hero() {
                     className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground hover:shadow-md"
                   >
                     <SmartphoneNfcIcon className="mb-3 h-8 w-8 text-primary" />
-                    App
+                    App con celular
                   </a>
                 </div>
                 <div>
@@ -207,7 +207,7 @@ export function Hero() {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
                   >
-                    Driver
+                    Una impresora de mi PC conectada a la app
                   </a>
                 </div>
                 <div>
@@ -222,7 +222,7 @@ export function Hero() {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
                   >
-                    Portal o aplicación
+                    Desde la app
                   </a>
                 </div>
               </RadioGroup>
