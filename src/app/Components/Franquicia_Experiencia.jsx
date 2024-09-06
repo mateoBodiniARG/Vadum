@@ -180,7 +180,7 @@ export function Franquicia_Experiencia() {
               Nombre
             </label>
             <input
-              className="h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="h-10 w-full rounded-md border px-3 py-2 text-sm text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
               id="franqName"
               placeholder="Ingresa tu nombre"
               value={franqName}
@@ -193,7 +193,7 @@ export function Franquicia_Experiencia() {
               Email
             </label>
             <input
-              className="h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="h-10 w-full rounded-md border px-3 py-2 text-sm text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
               id="franqEmail"
               placeholder="Ingresa tu email"
               value={franqEmail}
@@ -206,7 +206,7 @@ export function Franquicia_Experiencia() {
               Mensaje
             </label>
             <textarea
-              className="w-full resize-none rounded-md border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full resize-none rounded-md border px-3 py-2 text-sm text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
               id="franqMessage"
               placeholder="Cuéntanos por qué quieres ser parte de Vadum"
               value={franqMessage}

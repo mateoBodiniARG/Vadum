@@ -176,7 +176,7 @@ export function Hero() {
                     className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground hover:shadow-md"
                   >
                     <SmartphoneNfcIcon className="mb-3 h-8 w-8 text-primary" />
-                    App con celular
+                    Celular
                   </a>
                 </div>
                 <div>
@@ -207,7 +207,7 @@ export function Hero() {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
                   >
-                    Una impresora de mi PC conectada a la app
+                    Mi impresora Kuario
                   </a>
                 </div>
                 <div>
@@ -222,7 +222,7 @@ export function Hero() {
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
                   >
-                    Desde la app
+                    La app de Kuario
                   </a>
                 </div>
               </RadioGroup>
