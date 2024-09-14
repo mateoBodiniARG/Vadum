@@ -19,7 +19,7 @@ export function Franquicia_Experiencia() {
   const sendEmail = (formRef) => {
     emailjs
       .sendForm(
-        "service_mtyocxv",
+        "service_m7nubt3",
         "template_gvesn88",
         formRef.current,
         "QKnAoh9QQZ0-6AXIU"
