@@ -103,17 +103,17 @@ export function Hero() {
       </div>
 
       <section className="mx-3">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 m-8 max-w-screen-xl mx-auto">
-          <div className="p-4 rounded-lg flex flex-col items-center">
-            <a href="" className="w-28 h-28">
-              <img
-                src="/comoCargo.png"
-                alt="Cargá archivos"
-                className="w-28 h-28"
-              />
-            </a>
-            <span className="font-bold text-xl text-center">Como cargo saldo</span>
-          </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 m-8 max-w-screen-xl mx-auto">
+    <div className="p-4 rounded-lg flex flex-col items-center">
+      <a href="/como_cargo.mp4" target="_blank" rel="noopener noreferrer" className="w-28 h-28">
+        <img
+          src="/comoCargo.png"
+          alt="Cargá archivos"
+          className="w-28 h-28"
+        />
+      </a>
+      <span className="font-bold text-xl text-center">Como cargo saldo</span>
+    </div>
 
           <div className="p-4 rounded-lg flex flex-col items-center">
             <button
@@ -158,7 +158,7 @@ export function Hero() {
       <Dialog open={isDialogOpen} onOpenChange={handleCloseDialog}>
         <DialogContent>
           <DialogHeader className="flex justify-center items-center">
-            <b>Quiero imprimir desde...</b>
+            
           </DialogHeader>
           <div className="space-y-4 m-auto">
             {dialogMode === "charge" && (
@@ -187,7 +187,7 @@ export function Hero() {
                     onClick={() => setDialogMode("pc")}
                   >
                     <ComputerIcon className="mb-3 h-8 w-8 text-primary" />
-                    PC
+                    Computadora
                   </Label>
                 </div>
               </RadioGroup>
@@ -196,35 +196,36 @@ export function Hero() {
             {dialogMode === "pc" && (
               <RadioGroup className="grid grid-cols-2 gap-4">
                 <div>
-                  <RadioGroupItem
-                    value="driver"
-                    id="driver"
-                    className="peer sr-only"
-                  />
-                  <a
-                    href="https://example.com/pc-driver"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
-                  >
-                    Mi impresora Kuario
-                  </a>
-                </div>
+  <RadioGroupItem
+    value="driver"
+    id="driver"
+    className="peer sr-only"
+  />
+  <a
+    href="/como_instalo.mp4"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
+  >
+    Instalá la impresora Kuario
+  </a>
+</div>
                 <div>
-                  <RadioGroupItem
-                    value="portal"
-                    id="portal"
-                    className="peer sr-only"
-                  />
-                  <a
-                    href="https://example.com/pc-portal"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
-                  >
-                    La app de Kuario
-                  </a>
-                </div>
+  <RadioGroupItem
+    value="portal"
+    id="portal"
+    className="peer sr-only"
+  />
+  <a
+    href="/como_imprimo_pc.MP4"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
+  >
+    Imprimí ahora!
+  </a>
+</div>
+
               </RadioGroup>
             )}
           </div>
