@@ -89,7 +89,7 @@ export function Franquicia_Experiencia() {
       <div className="flex w-full flex-col items-center justify-center bg-gray-100 p-8 md:w-1/2 md:p-12 lg:p-16 xl:p-20">
         <div className="w-full text-center">
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
-            ¡Contános tu experiencia!
+            ¡Contanos tu experiencia!
           </h2>
         </div>
         <form

@@ -112,7 +112,7 @@ export function Hero() {
           className="w-28 h-28"
         />
       </a>
-      <span className="font-bold text-xl text-center">Como cargo saldo</span>
+      <span className="font-bold text-xl text-center">Cómo cargo saldo</span>
     </div>
 
           <div className="p-4 rounded-lg flex flex-col items-center">
@@ -127,30 +127,30 @@ export function Hero() {
               />
             </button>
             <span className="font-bold text-xl text-center">
-              Como imprimo
+              Cómo imprimo
             </span>
           </div>
 
           <div className="p-4 rounded-lg flex flex-col items-center">
-            <a href="" className="w-28 h-28">
+            <a href="/como_copio.mp4" className="w-28 h-28">
               <img
                 src="/comoCopio.png"
                 alt="Cargá archivos"
                 className="w-28 h-28"
               />
             </a>
-            <span className="font-bold text-xl text-center">Como copio</span>
+            <span className="font-bold text-xl text-center">Cómo copio</span>
           </div>
 
           <div className="p-4 rounded-lg flex flex-col items-center">
-            <a href="" className="w-28 h-28">
+            <a href="como_escaneo.mp4" className="w-28 h-28">
               <img
                 src="/comoEscaneo.png"
                 alt="Cargá archivos"
                 className="w-28 h-28"
               />
             </a>
-            <span className="font-bold text-xl text-center">Como escaneo</span>
+            <span className="font-bold text-xl text-center">Cómo escaneo</span>
           </div>
         </div>
       </section>
@@ -170,7 +170,7 @@ export function Hero() {
                     className="peer sr-only"
                   />
                   <a
-                    href="https://play.google.com/store/apps/details?id=com.skuario.app&hl=es_AR"
+                    href="/como_imprimo_cel.mp4"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground hover:shadow-md"
@@ -217,7 +217,7 @@ export function Hero() {
     className="peer sr-only"
   />
   <a
-    href="/como_imprimo_pc.MP4"
+    href="/como_imprimo_pc.mp4"
     target="_blank"
     rel="noopener noreferrer"
     className="flex flex-col items-center justify-center text-center rounded-md border-2 border-muted bg-popover p-4 cursor-pointer hover:bg-accent hover:text-accent-foreground"
