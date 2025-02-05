@@ -9,7 +9,7 @@ export function Footer() {
                 <a href="https://www.instagram.com/vadum.arg?igsh=amY0OTdmdTM3dWMz" className="hover:text-[#ca8ff1] text-[#b861f1]">
                     <i className="fab fa-instagram fa-xl"></i>
                 </a>
-                <a href="#" className="text-[#488de7] hover:text-[#699fe6]">
+                <a href="https://www.facebook.com/profile.php?id=61569444321716" className="text-[#488de7] hover:text-[#699fe6]">
                     <i className="fab fa-facebook fa-xl"></i>
                 </a>
                 <a href="https://wa.me/543416252829" className="text-[#25D366] hover:text-[#8bf3b1]">

@@ -22,13 +22,17 @@ export function Hero() {
   return (
     <section>
       <div className="text-center">
-        <h1 className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl mb-2">
-          Vadum
-        </h1>
-        <p className="text-lg text-gray-500">
-          El primer quiosco autogestionable del país.
-        </p>
-      </div>
+  <img
+    src="/vadum-logo2.png"
+    alt="Vadum Logo"
+    className="mx-auto h-16 md:h-24 lg:h-32"
+  />
+<br></br>
+  <p className="text-lg text-gray-500">
+    El primer quiosco autogestionable del país.
+  </p>
+</div>
+
 
       <div className="flex flex-col items-center space-y-6 mt-8 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
         {/* iOS */}
