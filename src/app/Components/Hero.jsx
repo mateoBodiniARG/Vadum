@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 import React, { useState } from "react";
 import { Dialog, DialogContent, DialogHeader } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
@@ -22,113 +22,92 @@ export function Hero() {
   return (
     <section>
       <div className="text-center">
-  <img
-    src="/vadum-logo2.png"
-    alt="Vadum Logo"
-    className="mx-auto h-16 md:h-24 lg:h-32"
-  />
-<br></br>
-  <p className="text-lg text-gray-500">
-    El primer quiosco autogestionable del país.
-  </p>
-</div>
-
+        <img
+          src="/vadum-logo2.png"
+          alt="Vadum Logo"
+          className="mx-auto h-16 md:h-24 lg:h-32"
+        />
+        <br />
+        <p className="text-lg text-gray-500">
+          El primer quiosco autogestionable del país.
+        </p>
+      </div>
 
       <div className="flex flex-col items-center space-y-6 mt-8 md:flex-row md:justify-center md:space-y-0 md:space-x-6">
-        {/* iOS */}
-        <div className="flex flex-col items-center space-x-3">
-          <span className="text-black font-semibold mb-2 text-lg">
-            Disponible en iOS
-          </span>
-          <div className="hidden md:block">
+        <div className="hidden md:flex flex-row space-x-6">
+          {/* iOS QR */}
+          <div className="flex flex-col items-center space-x-3">
+            <span className="text-black font-semibold mb-2 text-lg">Disponible en iOS</span>
             <div className="w-32 h-32 bg-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
               <img src="/iosQR.png" alt="QR iOS" className="bg-black" />
             </div>
           </div>
-          <div className="md:hidden">
-            <a
-              href="https://apps.apple.com/es/app/kuario/id1276585367"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-48 h-14 bg-black text-white rounded-xl items-center justify-center transition duration-300 hover:opacity-80 cursor-pointer flex "
-            >
-              <div className="mr-3">
-                <img
-                  src="/kuario.png"
-                  width={40}
-                  height={20}
-                  alt="imagen de kuario"
-                />
-              </div>
-              <div>
-                <div className="text-xs">Descarga en</div>
-                <div className="text-2xl font-semibold font-sans -mt-1">
-                  App Store
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
 
-        {/* Android */}
-        <div className="flex flex-col items-center space-x-3">
-          <span className="text-black font-semibold mb-2 text-lg">
-            Disponible en Android
-          </span>
-          <div className="hidden md:block">
+          {/* Android QR */}
+          <div className="flex flex-col items-center space-x-3">
+            <span className="text-black font-semibold mb-2 text-lg">Disponible en Android</span>
             <div className="w-32 h-32 bg-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80">
               <img src="/androidQR.png" alt="QR Android" />
             </div>
           </div>
-          <div className="md:hidden">
+        </div>
+
+        <div className="flex flex-row space-x-4 md:hidden">
+          {/* iOS botón */}
+          <div className="flex flex-col items-center space-x-3 text-center">
+            <span className="text-black font-semibold mb-2 text-sm">Disponible en iOS</span>
+            <a
+              href="https://apps.apple.com/es/app/kuario/id1276585367"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-40 h-12 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80 cursor-pointer"
+            >
+              <img
+                src="/kuario.png"
+                width={30}
+                height={15}
+                alt="imagen de kuario"
+                className="mr-2"
+              />
+              <span className="text-lg font-semibold">App Store</span>
+            </a>
+          </div>
+
+          {/* Android botón */}
+          <div className="flex flex-col items-center space-x-3 text-center">
+            <span className="text-black font-semibold mb-2 text-sm">Disponible en Android</span>
             <a
               href="https://play.google.com/store/apps/details?id=com.skuario.app&hl=es_AR"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-48 h-14 bg-black text-white rounded-xl  items-center justify-center transition duration-300 hover:opacity-80 cursor-pointer flex "
+              className="w-40 h-12 bg-black text-white rounded-xl flex items-center justify-center transition duration-300 hover:opacity-80 cursor-pointer"
             >
-              <div className="mr-3">
-                <img
-                  src="/kuario.png"
-                  width={40}
-                  height={20}
-                  alt="imagen de kuario"
-                />
-              </div>
-              <div>
-                <div className="text-xs">Descarga en</div>
-                <div className="text-2xl font-semibold font-sans -mt-1">
-                  Play Store
-                </div>
-              </div>
+              <img
+                src="/kuario.png"
+                width={30}
+                height={15}
+                alt="imagen de kuario"
+                className="mr-2"
+              />
+              <span className="text-lg font-semibold">Play Store</span>
             </a>
           </div>
         </div>
       </div>
 
+      {/* Sección de tutoriales */}
       <section className="mx-3">
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 m-8 max-w-screen-xl mx-auto">
-    <div className="p-4 rounded-lg flex flex-col items-center">
-      <a href="/como_cargo.mp4" target="_blank" rel="noopener noreferrer" className="w-28 h-28">
-        <img
-          src="/comoCargo.png"
-          alt="Cargá archivos"
-          className="w-28 h-28"
-        />
-      </a>
-      <span className="font-bold text-xl text-center">Cómo cargo saldo</span>
-    </div>
+        <div className="grid grid-cols-2 gap-4 m-8 max-w-screen-md mx-auto md:grid-cols-2">
+          <div className="p-4 rounded-lg flex flex-col items-center">
+            <a href="/como_cargo.mp4" target="_blank" rel="noopener noreferrer" className="w-24 h-24">
+              <img src="/comoCargo.png" alt="Cargá archivos" className="w-24 h-24" />
+            </a>
+            <span className="font-bold text-xl text-center">Cómo cargo saldo</span>
+          </div>
 
           <div className="p-4 rounded-lg flex flex-col items-center">
-            <button
-              onClick={() => handleOpenDialog("charge")}
-              className="cursor-pointer"
-            >
-              <img
-                src="/comoImprimo.png"
-                alt="Cargá archivos"
-                className="w-28 h-28"
-              />
+            <button onClick={() => handleOpenDialog("charge")} className="cursor-pointer">
+              <img src="/comoImprimo.png" alt="Cargá archivos" className="w-24 h-24" />
             </button>
             <span className="font-bold text-xl text-center">
               Cómo imprimo
